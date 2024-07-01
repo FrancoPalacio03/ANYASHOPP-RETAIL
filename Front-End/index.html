@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProductShopping</title>
+  <link rel="stylesheet" href="./css/cart.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/productDetails.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav id="navbar-container">
+      <div class="navbar">
+        <div class="text-center py-4 primary-text fs-4 fw-bold text-uppercase">
+          <img src="https://i.postimg.cc/Kv9W8zj4/spy-x-family-surprised-anya-forger-sticker.png" alt="Logo"
+            id="shop-logo">
+          AnyaShopp
+        </div>
+
+        <div class="search-bar-container">
+          <form class="d-flex" role="search" id="search-form">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+
+        <div class="container-icon">
+          <div class="container-cart-icon" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8a.5.5 0 0 1-.491.408H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2">
+              </path>
+            </svg>
+            <div class="count-products">
+              <span id="contador-productos">0</span>
+            </div>
+          </div>
+
+          <div class="container-cart-products hidden-cart">
+            <div class="row-product" id="cart-content"></div>
+
+            <div class="cart-total hidden">
+              <h3>SubTotal:</h3>
+              <span class="total-pagar"></span>
+            </div>
+            <p class="cart-empty">El carrito está vacío</p>
+            <div class="sale-btn-container hidden">
+              <button class="btn btn-primary sale-btn" type="button" id="sale-btn">Sale Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="allSales-btn">
+      <a href="allSales.html">
+        <button class="btn-rounded">ALL SALES</button>
+      </a>
+    </section>
+  </header>
+
+  <main id="page-content-wrapper">
+    <section class="page-content">
+      <div id="cards-container" class="cards-container">
+      </div>
+
+      <div class="loader" id="loader"></div>
+      <div id="no-results" class="text-center">
+        <p>No products with this name</p>
+      </div>
+
+      <!-- Pagination controls -->
+      <div class="pagination-container text-center" id="pagination-container">
+        <button id="prev-page" class="btn btn-secondary" disabled>
+          Previous
+        </button>
+        <span id="page-info"></span>
+        <button id="next-page" class="btn btn-secondary">Next</button>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <aside class="container" id="categories">
+      <h2 class="roboto-light">Categories</h2>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox"  type="checkbox" value="1" id="category1" />
+            <label class="form-check-label stretched-link" for="category1">Electrodomesticos</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox" type="checkbox" value="2" id="category2" />
+            <label class="form-check-label stretched-link" for="category2">Tecnología y Electrónica</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox" type="checkbox" value="3" id="category3" />
+            <label class="form-check-label stretched-link" for="category3">Moda y Accesorios</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox" type="checkbox" value="4" id="category4" />
+            <label class="form-check-label stretched-link" for="category4">Hogar y Decoración</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox" type="checkbox" value="5" id="category5" />
+            <label class="form-check-label stretched-link" for="category5">Salud y Belleza</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox" type="checkbox" value="6" id="category6" />
+            <label class="form-check-label stretched-link" for="category6">Deportes y Ocio</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox" type="checkbox" value="7" id="category7" />
+            <label class="form-check-label stretched-link" for="category7">Juguetes y Juegos</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox" type="checkbox" value="8" id="category8" />
+            <label class="form-check-label stretched-link" for="category8">Alimentos y Bebidas</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox" type="checkbox" value="9" id="category9" />
+            <label class="form-check-label stretched-link" for="category9">Libros y Material Educativo</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox" type="checkbox" value="10" id="category10" />
+            <label class="form-check-label stretched-link" for="category10">Jardinería y Bricolaje</label>
+          </div>
+        </li>
+      </ul>
+      <button id="apply-filters-btn" class="btn-rounded mt-3">
+        Apply Filters
+      </button>
+    </aside>
+  </main>
+
+
+  <!--Modals-->
+  <!-- Product Details Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card__title">
+            <h4 class="roboto-light" id="product-title">New products</h4>
+          </div>
+          <div class="card__body">
+            <div class="half">
+              <div class="image">
+                <img id="product-image" src="" alt="" />
+              </div>
+            </div>
+
+            <div class="info-container">
+              <div class="price-container">
+                <div class="featured_text">
+                  <a>Price</a>
+                  <p class="price" id="product-price"></p>
+                </div>
+                <div class="featured_text">
+                  <a>Especial Price</a>
+                  <p class="price" id="product-price-especial"></p>
+                </div>
+              </div>
+              <div class="half">
+                <div class="description">
+                  <a>Description</a>
+                  <p id="product-description"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <div class="quantity-control">
+              <h4>Quantity</h4>
+              <button class="btn-decrease">-</button>
+              <input type="number" id="product-quantity" value="1" min="1" readonly />
+              <button class="btn-increase">+</button>
+            </div>
+
+            <button class="btn btn-primary btn-add-cart" type="button" id="cart-button">
+              Add to cart
+            </button>
+
+            <div class="toast-container position-fixed bottom-0 end-0 p-5">
+              <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <img class="notification-image" class="rounded me-2" src="https://i.postimg.cc/Kv9W8zj4/spy-x-family-surprised-anya-forger-sticker.png" alt="..."/>
+                  <strong class="me-auto">System</strong>
+                  <small>now</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                  Product added to cart, tap the cart icon to view. <br />
+                  If you add an existing product, the quantity will be added.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Details Modal -->
+  <div class="modal fade" id="cartDetailsModal" tabindex="-1" aria-labelledby="cartDetailsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartDetailsModalLabel">Cart Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="py-2">
+                    <h5 class="font-size-15">Order Summary</h5>
+                    <div class="table-responsive">
+                      <table class="table align-middle table-nowrap table-centered mb-0">
+                        <thead>
+                          <tr>
+                            <th>No.</th>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th class="text-end">
+                              Total
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody id="cart-details-body">
+                          <!-- Items will be inserted dynamically here -->
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th scope="row" colspan="4" class="text-end">
+                              Sub Total
+                            </th>
+                            <td class="text-end" id="subtotal-details">
+                              $0.00
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" colspan="4" class="border-0 text-end">
+                              Discount :
+                            </th>
+                            <td class="border-0 text-end" id="discount-details">
+                              $0.00
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" colspan="4" class="border-0 text-end">
+                              IVA 21%
+                            </th>
+                            <td class="border-0 text-end" id="tax-details">
+                              $0.00
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" colspan="4" class="border-0 text-end">
+                              Total
+                            </th>
+                            <td class="border-0 text-end">
+                              <h4 class="m-0 fw-semibold" id="total-details">
+                                $0.00
+                              </h4>
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                    <div class="d-print-none mt-4">
+                      <div class="float-end">
+                        <button id="checkout-btn" class="btn-rounded">
+                          Check out
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Confirmation Modal-->
+  <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Information</h1>
+
+        </div>
+        <div class="modal-body" id="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="window.location.reload()">
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container-fluid text-white mt-5 py-5 px-sm-3 px-md-5">
+      <div class="row pt-3">
+        <div class="col-lg-4 col-md-12 mb-5">
+          <h1 class="mb-3 display-3 text-capitalize text-white">
+            <span class="text-primary">ANYASHOPP</span>
+          </h1>
+          <p class="m-0">¡Los mejores precios en el mejor lugar!</p>
+        </div>
+
+        <div class="col-lg-8 col-md-12">
+          <div class="row">
+            <div class="col-md-4 mb-5">
+              <h5 class="text-primary mb-4">Contacto</h5>
+              <p>
+                <i class="fa fa-map-marker-alt mr-2">
+                  Quilmes, Buenos Aires.</i>
+              </p>
+              <p><i class="fa fa-phone-alt mr-2"> 0810-220-2345</i></p>
+              <p>
+                <i class="fa fa-whatsapp mr-2"> +54-911-6702-6320</i>
+              </p>
+              
+            </div>
+
+            <div class="col-md-4 mb-5">
+              <h5 class="text-primary mb-4">Servicios</h5>
+              <div class="d-flex flex-column justify-content-start">
+                <a href="#" class="text-white mb-2"><i class="fa fa-angle-right"></i>Busqueda</a>
+                <a href="#" class="text-white mb-2"><i class="fa fa-angle-right"></i>Presupuesto</a>
+                <a href="#" class="text-white mb-2"><i class="fa fa-angle-right"></i>Venta</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-5">
+              <h5 class="text-primary mb-4">Comentarios</h5>
+              <form action="">
+                <div class="form-group comments">
+                  <input type="text" class="form-control border-0" placeholder="Nombre" name="" id="" />
+                </div>
+                <div class="form-group comments">
+                  <input type="email" class="form-control border-0" placeholder="Email" name="" id="" />
+                </div>
+                <div class="form-group comments">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Comentario"
+                    rows="3"></textarea>
+                </div>
+                <div class="mt-1 d-flex justify-content-end">
+                  <button class="btn btn-lg btn-primary border-0" type="submit">
+                    Enviar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="./js/productDetails.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/cartDetails.js"></script>
+</body>
+
+</html>

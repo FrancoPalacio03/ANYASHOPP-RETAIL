@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\“TP2-REST-Palacio_Franco.props" />
+</Project>

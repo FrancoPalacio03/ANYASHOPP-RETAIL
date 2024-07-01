@@ -1,0 +1,23 @@
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\TP2-REST-Palacio_Franco\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\ref\Domain.dll

@@ -1,0 +1,170 @@
+body {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.modal-dialog {
+  padding-top: 75px;
+}
+
+#page-content-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 20% 10%;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+.list-group {
+  padding-top: 15px;
+}
+
+#categories{
+  padding-top: 3  0px;
+}
+
+/* Navbar */
+#navbar-container {
+  background-color: #131313;
+  color: #c2c2c2;
+}
+
+.navbar {
+  margin: 0 20%;
+  height: 150px;
+}
+
+.search-bar-container {
+  margin: 0 auto;
+  justify-content: center;
+  width: 50%;
+}
+
+.icon-cart {
+  width: 40px;
+  height: 40px;
+  stroke: #000;
+}
+
+.icon-cart:hover {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+#shop-logo {
+  width: 60px;
+}
+
+#allSales-btn {
+  padding: 5px 385px;
+}
+
+/* Card */
+#card-tittle {
+  font-size: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;                          
+  width: 50rem;
+}
+
+.card-container:hover {
+  filter: drop-shadow(5px 5px 10px rgb(182, 182, 182));
+}
+
+.card-image {
+  max-width: 150px;
+  margin-right: 20px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.pricing {
+  margin-bottom: 20px;
+}
+
+.price {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.delivery-button {
+  width: 150px;
+  background-color: #e0f7df;
+  color: #1a871e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  text-align: center;
+}
+
+.delivery-button:hover {
+  background-color: #d2f2d0;
+}
+
+.cards-container {
+  width: 50rem;
+}
+
+.btn-rounded {
+  margin: 5px 5px 0 auto;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  background-color: rgb(77, 164, 77);
+  border-radius: 10px;
+  color: #fff;
+  transition: .5s;
+}
+
+footer {
+  background-color: black;
+}
+
+.list-group-item {
+  background: #e3e3e3 !important;
+}
+
+#loader{
+  display: none;
+}
+
+#no-results{
+  display: none;
+}
+
+.notification-image{
+  width: 35px;
+  height: 35px;
+}
+
+.comments{
+  padding-bottom: 10px;
+}

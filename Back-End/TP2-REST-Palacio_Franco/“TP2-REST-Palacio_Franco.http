@@ -1,0 +1,6 @@
+@_TP2_REST_Palacio_Franco_HostAddress = http://localhost:5051
+
+GET {{_TP2_REST_Palacio_Franco_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
