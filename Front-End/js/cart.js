@@ -46,16 +46,19 @@ function updateCart() {
         rowProduct.innerHTML = ''; 
         cartTotal.classList.add('hidden');
         saleBtn.classList.add('hidden');
+        saleBtn.classList.remove('d-flex');
     } else {
         cartEmpty.classList.add('hidden');
         cartTotal.classList.remove('hidden');
         saleBtn.classList.remove('hidden');
+        saleBtn.classList.add('d-flex');
 
         let total = 0;
         let totalOfProducts = 0;
 
         rowProduct.innerHTML = '';
         cartProducts.forEach(productToShow => {
+            const discountedPrice = productToShow.product.price - ((productToShow.product.discount * productToShow.product.price) / 100);
             const containerProduct = document.createElement('div');
             containerProduct.classList.add('cart-product');
             containerProduct.innerHTML = `
@@ -63,7 +66,7 @@ function updateCart() {
                 <span class="quantity-label">x</span>
                     <input type="number" step="1" min="1" name="quantity" value="${productToShow.quantity}" class="quantity-field border-0 text-center cart-product-quantity" data-id="${productToShow.product.id}">
                     <p class="titulo-producto-carrito">${productToShow.product.name}</p>
-                    <span class="precio-producto-carrito">$${new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(productToShow.product.price)}</span>
+                    <span class="precio-producto-carrito">$${new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(discountedPrice)}</span>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="icon-close cursor-pointer" data-title="${productToShow.product.name}">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />

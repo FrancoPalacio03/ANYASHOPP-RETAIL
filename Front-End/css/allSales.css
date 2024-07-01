@@ -1,0 +1,12 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+#date-boxes{
+    display: block;
+}
+
+#cards-container{
+    width: 100%;
+}

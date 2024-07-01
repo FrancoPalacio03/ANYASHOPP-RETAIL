@@ -21,3 +21,4 @@ C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOP
 C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\Domain\obj\Debug\net8.0\Domain.sourcelink.json

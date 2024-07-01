@@ -283,3 +283,4 @@ C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOP
 C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\TP2-REST-Palacio_Franco\obj\Debug\net8.0\“TP2-REST-Palacio_Franco.pdb
 C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\TP2-REST-Palacio_Franco\obj\Debug\net8.0\“TP2-REST-Palacio_Franco.genruntimeconfig.cache
 C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\TP2-REST-Palacio_Franco\obj\Debug\net8.0\ref\“TP2-REST-Palacio_Franco.dll
+C:\Users\franc\OneDrive\Escritorio\Documentos\C SHARP\PROYECTO SOFTWARE\ANYASHOPP RETAIL\Back-End\TP2-REST-Palacio_Franco\obj\Debug\net8.0\“TP2-REST-Palacio_Franco.sourcelink.json

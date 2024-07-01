@@ -44,6 +44,9 @@ document.getElementById('sale-btn').addEventListener('click', function() {
 
 
 document.getElementById('checkout-btn').addEventListener('click', function() {
+
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+
     const saleDetails = {
         products: cartProducts.map(item => ({
             productId: item.product.id,
@@ -62,27 +65,32 @@ document.getElementById('checkout-btn').addEventListener('click', function() {
     .then(response => {
         if (response.ok) {
            
-            const saleModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
-            document.getElementById('modal-body').innerHTML = `
+        
+            document.getElementById('toast-body').innerHTML = `
             <p>Completed Sale. Thank you for choosing us</p>
         `;
-            saleModal.show();
+            toastBootstrap.show()
+            setTimeout(() => {
+                location.reload();
+            }, 4000);
             
         } else {
-            const saleModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
-            document.getElementById('modal-body').innerHTML = `
+            document.getElementById('toast-body').innerHTML = `
             <p>RESPONSE ERROR!!!!</p>
         `;
-            saleModal.show();
-            
+            toastBootstrap.show()
+            setTimeout(() => {
+            location.reload();
+        }, 4000);
         }
     })
     .catch(error => {
-        const saleModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-            document.getElementById('modal-body').innerHTML = `
+            document.getElementById('toast-body').innerHTML = `
             <p>SERVER CONNECTION ERROR!!!!</p>
         `;
-            saleModal.show();
-            
+            toastBootstrap.show()
+            setTimeout(() => {
+                location.reload();
+            }, 4000);
     });
 });

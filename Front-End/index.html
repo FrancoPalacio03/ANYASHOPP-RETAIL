@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/cart.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/productDetails.css">
+  <link rel="stylesheet" href="./css/main.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -30,6 +31,10 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
+
+        <a href="allSales.html" id="allSales-btn">
+          <button class="btn btn-dark">ALL SALES</button>
+        </a>
 
         <div class="container-icon">
           <div class="container-cart-icon" type="button">
@@ -59,37 +64,21 @@
         </div>
       </div>
     </nav>
-    <section id="allSales-btn">
-      <a href="allSales.html">
-        <button class="btn-rounded">ALL SALES</button>
-      </a>
-    </section>
   </header>
 
-  <main id="page-content-wrapper">
-    <section class="page-content">
-      <div id="cards-container" class="cards-container">
-      </div>
+  <main id="page-content-wrapper">      
 
-      <div class="loader" id="loader"></div>
-      <div id="no-results" class="text-center">
-        <p>No products with this name</p>
-      </div>
-
-      <!-- Pagination controls -->
-      <div class="pagination-container text-center" id="pagination-container">
-        <button id="prev-page" class="btn btn-secondary" disabled>
-          Previous
-        </button>
-        <span id="page-info"></span>
-        <button id="next-page" class="btn btn-secondary">Next</button>
-      </div>
-    </section>
-
+    <section class="section-container">
     <!-- Categories -->
-    <aside class="container" id="categories">
+    <aside class="aside-container" id="categories">
       <h2 class="roboto-light">Categories</h2>
       <ul class="list-group">
+        <li class="list-group-item">
+          <div class="form-check form-switch">
+            <input class="form-check-input me-1 category-checkbox"  type="checkbox" value="0" id="all-products" checked/>
+            <label class="form-check-label stretched-link" for="all-products">All product</label>
+          </div>
+        </li>
         <li class="list-group-item">
           <div class="form-check form-switch">
             <input class="form-check-input me-1 category-checkbox"  type="checkbox" value="1" id="category1" />
@@ -151,10 +140,22 @@
           </div>
         </li>
       </ul>
-      <button id="apply-filters-btn" class="btn-rounded mt-3">
-        Apply Filters
-      </button>
     </aside>
+    
+    <div id="cards-container" class="cards-container">
+    </div>
+    <div class="loader" id="loader"></div>
+    <div id="no-results" class="text-center">
+      <p>No products with this name</p>
+    </div>
+  </section>
+    <div class="pagination-container text-center" id="pagination-container">
+      <button id="prev-page" class="btn btn-secondary" disabled>
+        Previous
+      </button>
+      <span id="page-info"></span>
+      <button id="next-page" class="btn btn-secondary">Next</button>
+    </div>
   </main>
 
 
@@ -164,7 +165,9 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
+          <h4 class="roboto-light">Product Details</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          
         </div>
         <div class="modal-body">
           <div class="card__title">
@@ -181,12 +184,17 @@
               <div class="price-container">
                 <div class="featured_text">
                   <a>Price</a>
-                  <p class="price" id="product-price"></p>
-                </div>
-                <div class="featured_text">
-                  <a>Especial Price</a>
-                  <p class="price" id="product-price-especial"></p>
-                </div>
+                  <div class="d-flex">
+                  <p class="original-price" id="product-price"></p>           
+                  <span class="discount" id="discount"><svg class="discount-label" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags" viewBox="0 0 16 16">
+                    <path d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z"/>
+                    <path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z"/>
+                    </svg>${product.discount}% OFF
+                  </span>
+                  </div>
+                  <p class="price" id="discounted-price"></p>
+                  
+                </div>               
               </div>
               <div class="half">
                 <div class="description">
@@ -209,20 +217,6 @@
               Add to cart
             </button>
 
-            <div class="toast-container position-fixed bottom-0 end-0 p-5">
-              <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                  <img class="notification-image" class="rounded me-2" src="https://i.postimg.cc/Kv9W8zj4/spy-x-family-surprised-anya-forger-sticker.png" alt="..."/>
-                  <strong class="me-auto">System</strong>
-                  <small>now</small>
-                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                  Product added to cart, tap the cart icon to view. <br />
-                  If you add an existing product, the quantity will be added.
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -315,25 +309,21 @@
     </div>
   </div>
 
-  <!--Confirmation Modal-->
-  <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Information</h1>
-
-        </div>
-        <div class="modal-body" id="modal-body">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="window.location.reload()">
-            Accept
-          </button>
-        </div>
+  <!--Toast-->
+  <div class="toast-container position-fixed bottom-0 end-0 p-5">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img class="notification-image" class="rounded me-2" src="https://i.postimg.cc/Kv9W8zj4/spy-x-family-surprised-anya-forger-sticker.png" alt="..."/>
+        <strong class="me-auto">System</strong>
+        <small>now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="toast-body">
+        
       </div>
     </div>
   </div>
+
 
   <footer>
     <div class="container-fluid text-white mt-5 py-5 px-sm-3 px-md-5">

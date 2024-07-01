@@ -8,7 +8,8 @@ function showProductDetails(product) {
 
       document.getElementById('product-title').textContent = data.name;
       document.getElementById('product-price').textContent = `$${formattedPrice}`;
-      document.getElementById('product-price-especial').textContent = `$${discountedPrice}`;
+      document.getElementById('discounted-price').textContent = `$${discountedPrice}`;
+      document.getElementById('discount').textContent = `${data.discount}% OFF`;
       document.getElementById('product-image').src = data.imageUrl;
       document.getElementById('product-description').textContent = data.description;
       const modal = new bootstrap.Modal(document.getElementById('productModal'));
@@ -48,6 +49,11 @@ const toastLiveExample = document.getElementById('liveToast')
 if (toastTrigger) {
   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
   toastTrigger.addEventListener('click', () => {
+    
+    document.getElementById('toast-body').innerHTML = `
+            <p>Product added to cart, tap the cart icon to view. <br />
+        If you add an existing product, the quantity will be added.</p>`
+
     toastBootstrap.show()
   })
 }

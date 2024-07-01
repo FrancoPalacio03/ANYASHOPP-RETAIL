@@ -1,0 +1,16 @@
+
+
+#page-content-wrapper {
+    display: block;
+    margin: 0 20% 10%;
+}
+
+.section-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.aside-container{
+    width: 275px;
+}
+  

@@ -79,6 +79,7 @@
 
 .quantity-control input{
   font-size: 20px;
+  height: 50px;
 }
 .btn-decrease{
   border-bottom-left-radius:  50%;
