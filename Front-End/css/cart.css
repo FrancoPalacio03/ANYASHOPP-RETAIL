@@ -6,8 +6,8 @@
   position: absolute;
   left: 20px;
   bottom: 20px;
-  background-color: #eaeaea;
-  color: #040000;
+  background-color: var(--primary);
+  color: var(--secondary);
   width: 25px;
   height: 25px;
 
@@ -31,11 +31,11 @@ display: flex;
   position: absolute;
   top: 50px;
   right: 0;
-  color: #494949;
-  background-color: #fff;
+  color: rgb(117, 117, 117);
+  background-color: var(--primary);
   width: 420px;
   z-index: 1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 10px 20px rgba(117, 117, 117, 0.645);
   border-radius: 10px;
   width: 450px;
 }
@@ -46,7 +46,7 @@ display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+  border-bottom: 1px solid var(--secondary);
 
 }
 
@@ -63,7 +63,7 @@ display: flex;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px; /* Ajusta este valor según sea necesario */
+  max-width: 200px;
   display: inline-block;
   vertical-align: middle;
   padding-left: 15px;
@@ -87,7 +87,7 @@ display: flex;
 }
 
 .icon-close:hover{
-  stroke: red;
+  stroke: var(--quintary);
   cursor: pointer;
 }
 
@@ -126,7 +126,7 @@ display: flex;
 }
 
 .item:hover{
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 10px 20px var(--secondary);
 }
 
 .item img{
@@ -161,8 +161,8 @@ display: flex;
 .info-product button{
   border: none;
   background: none;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--secondary);
+  color: var(--primary);
   padding: 15px 10px;
   cursor: pointer;
 }
@@ -185,7 +185,7 @@ display: flex;
   width: 200px;
   height: 50px;
   font-size: 20px;
-  background-color: #1a871e;
+  background-color: var(--terciary);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }

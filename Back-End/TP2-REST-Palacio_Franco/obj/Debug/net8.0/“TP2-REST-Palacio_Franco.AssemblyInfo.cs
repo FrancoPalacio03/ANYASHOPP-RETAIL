@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("“TP2-REST-Palacio_Franco")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44092cf7ac32e55b702d471e4de0f3126bef77bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79a35fe458665698c58a255811826f712f0f2dc3")]
 [assembly: System.Reflection.AssemblyProductAttribute("“TP2-REST-Palacio_Franco")]
 [assembly: System.Reflection.AssemblyTitleAttribute("“TP2-REST-Palacio_Franco")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

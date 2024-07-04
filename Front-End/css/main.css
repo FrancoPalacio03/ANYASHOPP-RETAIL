@@ -1,16 +1,149 @@
-
-
-#page-content-wrapper {
-    display: block;
-    margin: 0 20% 10%;
-}
-
-.section-container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.aside-container{
-    width: 275px;
+:root {
+  --primary: #f4f4f4;
+  --secondary: #000000;
+  --terciary: #238b3b;
+  --cuartiary: #0056b3;
+  --quintary: #ff0303;
 }
   
+  
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding-top: 50px;
+}
+
+#navbar-container {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.navbar {
+  margin: 0 20%;
+  height: 150px;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#page-content-wrapper {
+  display: block;
+  margin: 0 20% 10%;
+}
+
+.section-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aside-container {
+  width: 275px;
+}
+
+.modal-dialog {
+  padding-top: 75px;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+#shop-logo {
+  width: 60px;
+}
+
+footer {
+  background-color: var(--secondary);
+}
+
+#loader {
+  display: none;
+}
+
+#no-results {
+  display: none;
+}
+
+.notification-image {
+  width: 35px;
+  height: 35px;
+}
+
+.comments {
+  padding-bottom: 10px;
+}
+
+#card-tittle {
+  font-size: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 50rem;
+}
+
+.card-container:hover {
+  background-color: #00000011;
+}
+
+.card-image {
+  max-width: 150px;
+  margin-right: 20px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.pricing {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-tittle {
+  padding-top: 15px;
+}
+
+.price {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--cuartiary);
+}
+  
+.btn-rounded {
+  margin: 5px 5px 0 auto;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  background-color: green;
+  border-radius: 10px;
+  color: var(--primary);
+  transition: .5s;
+}
+
+.list-group {
+  padding-top: 15px;
+}
+
+.modal-header {
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+  justify-content: flex-end;
+}
